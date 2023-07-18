@@ -40,8 +40,18 @@
 
 #### ОТВЕТ:
 
-![Скриншот-1](https://github.com/Monooks/12-01_NetoHW/blob/main/img/12.01_1.png)
-
+```python
+CREATE TABLE customer (
+    customer_name varchar(50) NOT NULL,
+    customer_login varchar(20) NOT NULL,
+    customer_password varchar(10) NOT NULL,
+    customer_address varchar(50) NOT NULL,
+    delivery_address varchar(50) NOT NULL,
+    purchases JSON, --{id_продукта: количество}
+    amount decimal(10, 2),
+    wish_list text[]
+)
+```
 ---
 
 ## Дополнительные задания (со звёздочкой*)
