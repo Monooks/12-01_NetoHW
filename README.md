@@ -41,15 +41,15 @@
 #### ОТВЕТ:
 
 ```python
-CREATE TABLE customer (
-    customer_name varchar(50) NOT NULL,
-    customer_login varchar(20) NOT NULL,
-    customer_password varchar(10) NOT NULL,
-    customer_address varchar(50) NOT NULL,
-    delivery_address varchar(50) NOT NULL,
-    purchases JSON, --{id_продукта: количество}
-    amount decimal(10, 2),
-    wish_list text[]
+CREATE TABLE employees (
+    employee_name varchar(50) NOT NULL,
+    employee_salary decimal(10, 2) NOT NULL,
+    employees_position varchar(50) NOT NULL,
+    subdivision_type varchar(20) NOT NULL, #внешний ключ
+    structural_subdivision varchar(60) NOT NULL,
+    hire_date date NOT NULL,
+    branch_address varchar(70) NOT NULL,
+    project SET
 )
 ```
 ---
@@ -63,6 +63,8 @@ CREATE TABLE customer (
 
 #### ОТВЕТ:
 
-![Скриншот-2](https://github.com/Monooks/12-01_NetoHW/blob/main/img/12.01_2.png)
+1. Тип подразделения и структурное подразделение - функциональные зависимости;
+2. Привести поле "проект" в атомарный вид, выделить в отдельную таблицу адрес филиала, создать первичный ключ для первой таблицы.
+
 
 ---
